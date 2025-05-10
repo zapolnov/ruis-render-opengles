@@ -39,7 +39,7 @@ shader_pos_tex::shader_pos_tex(utki::shared_ref<ruis::render::context> render_co
 
 			void main(void){
 				gl_Position = matrix * a0;
-				tc0 = vec2(a1.x, 1.0f - a1.y);
+				tc0 = vec2(a1.x, 1.0 - a1.y);
 			}
 		)qwertyuiop",
 		R"qwertyuiop(
