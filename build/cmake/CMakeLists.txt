@@ -3,13 +3,6 @@ cmake_minimum_required(VERSION 3.30)
 set(name ruis-render-opengles)
 project(${name})
 
-#find_package(unofficial-angle REQUIRED CONFIG)
-#target_link_libraries(main PRIVATE unofficial::angle::libGLESv2)
-
-# Or use the EGL target
-#find_package(unofficial-angle REQUIRED CONFIG)
-#target_link_libraries(main PRIVATE unofficial::angle::libEGL)
-
 if(NOT IGAGIS_CMAKE_COMMON_INCLUDED)
     set(dir "${CMAKE_CURRENT_SOURCE_DIR}/../../tool-configs/cmake")
     if(NOT EXISTS "${dir}/common.cmake")
@@ -42,4 +35,5 @@ declare_library(${name}
         ruis
     EXTERNAL_DEPENDENCIES
         GLEW
+        GLESv2
 )
